@@ -9,6 +9,8 @@ This is a truthful summary of the Codex-assisted work in this workspace, not an 
 - Added a 16-company mock portfolio, five research-only companies, arbitrary NSE ticker source lookup, alert filters, and threshold controls.
 - Audited the implementation against the assignment and corrected sample-data labeling, source-link behavior, and the date display.
 - Ran JavaScript syntax checks with `node --check` on the prototype script.
+- Published the static prototype to GitHub Pages and opened the live page in a desktop browser: https://sitendernarwal.github.io/enam-finn-ai-engineer/.
+- Created the public source repository: https://github.com/sitendernarwal/enam-finn-ai-engineer.
 
 ## AI use and review approach
 
