@@ -61,6 +61,12 @@
 
 **AI:** I published the static prototype to GitHub Pages. Both project Pages workflows completed successfully.
 
+### 10. Polish the research screen for submission
+
+**User:** The calculations section doesn't look right. Please fix it, and make the prototype polished enough to submit.
+
+**AI:** I fixed the dark-theme contrast in the calculation panel and added a quarterly revenue chart that appears only when sample revenue inputs are available. I also made the market simulation, chart, and dashboard quotes stay in sync. The figures remain clearly labeled as illustrative.
+
 ## Delivered prototype
 
 - Push daily brief with sample event filters, relevance reasons, and editable demo thresholds
@@ -68,14 +74,17 @@
 - Search for listed companies and source discovery for typed NSE tickers
 - Transparent illustrative calculations and source-discovery links
 - Saved research and a “Continue research” path for the last viewed company
-- macOS 26 Liquid Glass styling and interactive Sitender profile
+- macOS 26 Liquid Glass styling, a default dark theme with a light-mode toggle, and interactive Sitender profile
+- Phone-friendly bottom navigation with safe-area spacing
+- Simulated market pulse with a synchronized chart and clearly labeled dashboard quotes
+- Quarterly revenue chart and higher-contrast calculation cards for companies with sample data
 
 ## Validation and deployment
 
 - JavaScript syntax checks passed for app.js and analysis.js.
 - HTML structure checks found no duplicate IDs or missing local scripts.
 - GitHub Pages deployments completed successfully.
-- The project owner reported checking the site on a phone. A later screen recording showed the company-detail scroll gap; the fix was deployed. No independent on-device retest is recorded here.
+- A 390 px responsive browser preview confirmed the bottom navigation, theme toggle, simulated chart, and no horizontal overflow. The company-tap scroll fix is deployed; this browser preview is not a physical-device retest.
 
 **Live prototype:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer
