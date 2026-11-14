@@ -13,7 +13,7 @@ The phone layout includes persistent bottom navigation. Dark mode is the default
 
 ## AI research assistant
 
-The Research view includes an Ask FINN interface. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API is deployed and the key is stored in Vercel; live answers also require available OpenAI API credits. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and setup.
+The Research view includes an Ask FINN interface. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API uses Vercel AI Gateway's free-eligible model and official NSE/BSE search, paid from the included monthly allowance while available. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and setup.
 
 ## Demo flows
 
@@ -26,10 +26,10 @@ The Research view includes an Ask FINN interface. Its shared server-side API run
 
 ## Data and limitations
 
-The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. No live market feed is connected. Displayed prices, financial values, and alerts are illustrative; Ask FINN needs available OpenAI API credits before it can answer. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Existing source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
+The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. No live market feed is connected. Displayed prices, financial values, and alerts are illustrative; Ask FINN searches official NSE/BSE sources while Vercel's included AI allowance is available. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Existing source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
 
 ## Architecture
 
-Use deterministic code for calculations and thresholds. Ask FINN's planned server-side API uses the OpenAI Responses API with NSE/BSE domain restrictions and must not present sample data as real. In a production version, ingest company fundamentals from primary documents. Keep source URLs and reporting periods with each claim; use an LLM only to summarize retrieved evidence, never as the source of a financial figure.
+Use deterministic code for calculations and thresholds. Ask FINN's server-side API uses Vercel AI Gateway with search restricted to NSE/BSE domains and must not present sample data as real. In a production version, ingest company fundamentals from primary documents. Keep source URLs and reporting periods with each claim; use an LLM only to summarize retrieved evidence, never as the source of a financial figure.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for static-host steps. See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for an honest status of each assignment checkpoint. The [COVERING_NOTE.md](COVERING_NOTE.md) and [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) are ready to include with the submission.
