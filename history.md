@@ -3,75 +3,79 @@
 ## AI-assisted project history
 
 **Prepared:** 14 November 2026  
-**Format:** Curated, reconstructed dialogue summary
+**Format:** Reconstructed, dialogue-style summary
 
-> This is an edited account of the project decisions and work. It is not a verbatim transcript of the Codex conversation and does not reproduce exact prompts.
+> The prompts below are edited to reflect the project owner's direct, conversational style. They summarize the work; they are not copied or verbatim chat messages.
 
 ## Project conversation
 
-### 1. Defining the assignment
+### 1. Start with both assignments
 
-**Project owner — What should the prototype help an investor do?**  
-Connect a useful daily brief to a practical company-research view, with a focused workflow that can be demonstrated on a phone.
+**User:** I have two assignments. Tell me what I should do for each one.
 
-**AI — Recommended product shape**  
-Build FINN around two flows: **Push** for a concise daily brief and **Pull** for company research. Keep the journey direct: an alert should open research for the company it concerns.
+**AI:** I reviewed them separately. This assignment focuses on an investor's daily brief and company research. I kept its solution in its own folder, separate from the Founding AI Engineer prototype.
 
-### 2. Choosing a build approach
+### 2. Choose the right approach
 
-**Project owner — How should the assignment be delivered?**  
-Make a working prototype that is easy to inspect, run, and publish.
+**User:** Which approach will be best for both?
 
-**AI — Implementation choice**  
-Use static HTML, CSS, and JavaScript. Label sample market values and company figures as illustrative, and describe source links as discovery links rather than implying that they point to verified filings.
+**AI:** Build FINN as a mobile-first prototype with two connected flows: Push for the daily brief and Pull for company research. Keep the first version static and label sample data clearly.
 
-### 3. Building Push and Pull
+### 3. Build and check the assignment
 
-**Project owner — What should the investor be able to do?**  
-Filter a daily brief, search a portfolio and additional companies, and continue from an event to the right research view.
+**User:** Okay, build the two solutions separately. Then do a quality check and fix anything that needs improvement.
 
-**AI — Interaction design**  
-Build the 16-company mock portfolio and five research-only examples; make alert filters and demo thresholds work; allow a typed NSE ticker to open a source-discovery view; and connect each alert to its company research. Add a saved-research list and a “Continue research” action that resumes the most recently viewed company in the current browser tab.
+**AI:** I built the brief, filters, company search, research views, and source-discovery links. The mock portfolio contains 16 companies, with five additional research-only examples. I checked calculations, alert thresholds, missing data, labels, and the handoff from an alert to company research.
 
-### 4. Making calculations and labels clearer
+### 4. Make the analysis clearer
 
-**Project owner — Are the calculations and sample claims consistent?**  
-Check the numeric inputs, movement thresholds, results copy, and financial metrics.
+**User:** Are the calculations and analysis working properly? What else should be improved?
 
-**AI — Quality improvements**  
-Show formulas and sample inputs, handle missing values safely, use numeric price-movement data in alert filtering, and remove sample copy that conflicted with the financial series. Omit EBITDA for banks and lenders and identify missing bank-specific inputs. Mark ranking scores and calculations as demo-only.
+**AI:** I added transparent formulas and sample inputs, handled missing or zero values safely, and made movement alerts use numeric price and volume thresholds. I corrected a mismatch in the sample revenue commentary. Banks and lenders now show bank-appropriate metrics as missing instead of presenting EBITDA as a useful bank measure.
 
-### 5. Refining the phone experience
+### 5. Refine the interface
 
-**Project owner — What should happen when a company is selected on a phone?**  
-The selected company should open, or its detail should be brought into view.
+**User:** Can you make the UI feel like macOS 26 Liquid Glass? Also, make the profile button work and show my name as Sitender.
 
-**AI — Navigation fix**  
-Scroll the selected company detail into view after a company chip, alert, saved item, or research-queue action is tapped. Keep the selected company visually and accessibly marked.
+**AI:** I strengthened the glass styling, kept the layout responsive, and made the profile controls open a demo profile labeled Sitender.
 
-### 6. Reviewing and publishing
+### 6. Fix the phone company-tap flow
 
-**Project owner — What should be checked before sharing the prototype?**  
-Review the main flows, make the data limits clear, and deploy the site.
+**User:** If I tap a company on my phone, it should open the details or scroll me to that information.
 
-**AI — Review summary**  
-Run JavaScript syntax checks and structural checks for duplicate HTML IDs and missing script files. Publish the static prototype to GitHub Pages and confirm the Pages workflow succeeds. The project owner reported checking the phone layout; a later screen recording identified the company-detail scroll gap, which was then fixed and redeployed.
+**AI:** I updated company selection so tapping a company chip, alert, saved item, or research-queue action opens that company and scrolls its details into view. The selected company is also marked in the company list.
+
+### 7. Decide what to do about live prices
+
+**User:** Do I have to connect live prices for the assignment?
+
+**AI:** The prototype can demonstrate its flows with clearly labeled sample data. The submission checklist marks live data ingestion as partial, so a live feed is needed only if the reviewer expects that checkpoint to be complete. This prototype does not claim that its prices or financial figures are live.
+
+### 8. Prepare and publish the submission
+
+**User:** I need to send two emails. Can you prepare one for each assignment?
+
+**AI:** I drafted separate submission emails with this demo and repository link. I also created this curated history so a reviewer can follow the project decisions without treating it as a full conversation export.
+
+**User:** Make both prototypes deployable.
+
+**AI:** I published the static prototype to GitHub Pages. Both project Pages workflows completed successfully.
 
 ## Delivered prototype
 
-- Daily brief with sample event filters, relevance reasons, and editable demo thresholds
-- Research for a 16-company mock portfolio and five research-only examples
+- Push daily brief with sample event filters, relevance reasons, and editable demo thresholds
+- Pull research for a 16-company mock portfolio and five research-only examples
 - Search for listed companies and source discovery for typed NSE tickers
-- Transparent calculations based on illustrative sample figures
+- Transparent illustrative calculations and source-discovery links
 - Saved research and a “Continue research” path for the last viewed company
-- macOS 26 Liquid Glass visual treatment and interactive Sitender profile
+- macOS 26 Liquid Glass styling and interactive Sitender profile
 
 ## Validation and deployment
 
 - JavaScript syntax checks passed for app.js and analysis.js.
 - HTML structure checks found no duplicate IDs or missing local scripts.
 - GitHub Pages deployments completed successfully.
-- The owner reported completing a phone check. The latest company-selection scroll fix was verified through code checks and successful Pages deployment; no independent on-device retest is recorded here.
+- The project owner reported checking the site on a phone. A later screen recording showed the company-detail scroll gap; the fix was deployed. No independent on-device retest is recorded here.
 
 **Live prototype:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer
@@ -79,10 +83,10 @@ Run JavaScript syntax checks and structural checks for duplicate HTML IDs and mi
 ## Known limits
 
 - Prices, financial values, alerts, and events are illustrative; no live market feed, filing ingestion, or fundamentals pipeline is connected.
-- The prototype uses a static source-discovery flow and does not call a language model.
-- Saved research and preferences are stored in the current browser session, not in a signed-in account.
-- The source links are discovery pages rather than links to the specific documents behind sample claims.
+- The prototype does not call a language model or present AI-generated financial conclusions as verified facts.
+- Saved research and preferences are local to the current browser session, not a signed-in account.
+- Source links lead to discovery pages rather than the specific documents behind sample claims.
 
 ## AI-use note
 
-AI assistance was used for product framing, UI and interaction implementation, code review, documentation, and deployment preparation. The project owner reviewed the output and provided product feedback. This file is a curated project record; use a separate Codex export or share link if a reviewer requires the complete conversation.
+AI assistance supported product framing, UI and interaction implementation, code review, documentation, and deployment preparation. The project owner reviewed the output and provided product feedback. This file is a curated project history, not a full Codex export.
