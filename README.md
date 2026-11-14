@@ -9,12 +9,15 @@ A responsive prototype for two investor workflows: a prioritized Push brief and 
 
 Open `index.html` in a browser, or serve this folder with `python3 -m http.server 8000` and visit `http://localhost:8000`.
 
+The phone layout includes persistent bottom navigation. Dark mode is the default, with a remembered light-mode option. Charts display illustrative data only; no live market feed is connected.
+
 ## Demo flows
 
 - Filter a four-item daily brief by filings or market moves; open an item to continue into company research.
-- Search the sample companies, review business snapshots, illustrative financial trends, and bull/bear cases.
+- Search the sample companies, review the quarterly revenue chart, illustrative calculations, and bull/bear cases.
 - Follow a company and adjust the demo alert thresholds.
 - Use `⌘K` / `Ctrl+K` to jump to research.
+- Review the simulated NIFTY 50 pulse and synchronized dashboard quotes.
 
 ## Data and limitations
 
