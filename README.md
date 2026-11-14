@@ -13,7 +13,7 @@ The phone layout includes persistent bottom navigation. Dark mode is the default
 
 ## AI research assistant
 
-The Research view includes an Ask FINN interface. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API is deployed, but `OPENAI_API_KEY` still needs to be added in Vercel before live answers are available. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and setup.
+The Research view includes an Ask FINN interface. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API is deployed and the key is stored in Vercel; live answers also require available OpenAI API credits. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and setup.
 
 ## Demo flows
 
@@ -26,7 +26,7 @@ The Research view includes an Ask FINN interface. Its shared server-side API run
 
 ## Data and limitations
 
-The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. No live market feed is connected. Displayed prices, financial values, and alerts are illustrative; Ask FINN needs the OpenAI key to be configured in Vercel before it can answer. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Existing source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
+The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. No live market feed is connected. Displayed prices, financial values, and alerts are illustrative; Ask FINN needs available OpenAI API credits before it can answer. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Existing source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
 
 ## Architecture
 
