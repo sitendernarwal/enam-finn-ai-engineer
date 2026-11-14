@@ -6,11 +6,11 @@ Hello ENAM team,
 
 I built FINN, a mobile-first prototype linking a prioritized investor brief to company research. The Push flow groups sample announcements and unusual market moves; selecting an item opens the relevant Pull research view, with source discovery and a balanced set of questions to investigate.
 
-The prototype includes a 16-company mock watchlist, five additional research-only companies, and a source lookup for arbitrary NSE tickers. Figures and sample alerts are illustrative. Live market data, exchange filings, and company fundamentals are not yet ingested; the next step would connect permitted primary sources and cite each research claim to its source document.
+The prototype includes a 16-company mock watchlist, five additional research-only companies, and a source lookup for arbitrary NSE tickers. The mobile prototype includes dark mode, a light-mode toggle, persistent bottom navigation, and charts that make its sample data easier to review. Figures and sample alerts are illustrative. Live market data, exchange filings, and company fundamentals are not yet ingested; the next step would connect permitted primary sources and cite each research claim to its source document.
 
 **Prototype:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer  
-**AI build history:** [add Codex export/share link]
+**AI build history:** https://github.com/sitendernarwal/enam-finn-ai-engineer/blob/main/history.md
 
 Regards,  
-[Your name]
+Sitender
