@@ -13,7 +13,7 @@ The phone layout includes persistent bottom navigation. Dark mode is the default
 
 ## AI research assistant
 
-The Research view includes Ask FINN. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API retrieves recent official NSE disclosures and uses Gemini 3.5 Flash-Lite with URL Context to summarize the linked filing documents. The API key stays in Vercel. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and free-tier setup.
+The Research view includes Ask FINN. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API retrieves recent official NSE announcement metadata and asks Gemini 3.5 Flash-Lite to summarize those records. Official filing links are returned separately for verification. The API key stays in Vercel. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and free-tier setup.
 
 ## Demo flows
 
@@ -30,6 +30,6 @@ The mock portfolio contains 16 tracked companies; six have illustrative research
 
 ## Architecture
 
-Use deterministic code for calculations and thresholds. Ask FINN uses Gemini 3.5 Flash-Lite with URL Context to read specific official NSE filings returned for the selected ticker. In a production version, ingest company fundamentals from primary documents. Keep source URLs and reporting periods with each claim; use an LLM only to summarize retrieved evidence, never as the source of a financial figure.
+Use deterministic code for calculations and thresholds. Ask FINN uses Gemini 3.5 Flash-Lite to summarize recent NSE announcement metadata for the selected ticker; official filing links are supplied for the user to verify. In a production version, ingest company fundamentals from primary documents. Keep source URLs and reporting periods with each claim; use an LLM only to summarize retrieved evidence, never as the source of a financial figure.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for static-host steps. See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for an honest status of each assignment checkpoint. The [COVERING_NOTE.md](COVERING_NOTE.md) and [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) are ready to include with the submission.
