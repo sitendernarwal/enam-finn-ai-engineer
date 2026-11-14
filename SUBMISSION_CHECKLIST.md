@@ -2,8 +2,9 @@
 
 | Requirement | Status | Evidence / remaining work |
 |---|---|---|
-| Mobile-first working prototype | Built and deployed; 390 px responsive browser check completed | index.html, styles.css, analysis.js, and enhancements files implement a Push brief and Pull company research flow. Live demo: https://sitendernarwal.github.io/enam-finn-ai-engineer/. Browser preview confirmed bottom navigation, theme toggle, simulated chart, and no horizontal overflow; this was not a physical-device test. |
-| Mock portfolio of 15–20 listed companies | Present | 16 tickers are included. Six have illustrative research figures; ten are placeholders. |
+| Mobile-first working prototype | Built and deployed; previous screens checked at 390 px | index.html, analysis.js, portfolio.js, and styles implement the Push brief, Pull research, Portfolio, and Watchlist. New views pass syntax, route, ID, and local-asset checks; a fresh phone visual review of these views is pending. Live demo: https://sitendernarwal.github.io/enam-finn-ai-engineer/. |
+| Mock portfolio of 15–20 listed companies | Present | The Portfolio view lists 16 tracked companies. Six have illustrative research figures; ten remain blank until sourced. It does not invent position quantities or returns. |
+| Portfolio and watchlist navigation | Complete | Portfolio search, company-to-research links, add/remove watchlist actions, and browser-local persistence are available on desktop and phone. |
 | 3–5 ad-hoc research companies outside portfolio | Present as source-only entries | Five additional companies can be searched; figures remain blank until primary data is connected. |
 | Generalize to any NSE ticker | Partial | Enter a ticker to open a source-discovery view. Live market data, filings, and fundamentals are not connected. |
 | Market data, announcements, company fundamentals | Partial | The UI has sample events and illustrative figures; no source ingestion runs. |
