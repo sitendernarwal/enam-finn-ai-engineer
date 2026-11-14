@@ -15,13 +15,14 @@ The phone layout includes persistent bottom navigation. Dark mode is the default
 
 - Filter a four-item daily brief by filings or market moves; open an item to continue into company research.
 - Search the sample companies, review the quarterly revenue chart, illustrative calculations, and bull/bear cases.
-- Follow a company and adjust the demo alert thresholds.
+- Browse the 16-company Portfolio, search by name or sector, and add or remove companies from a device-local Watchlist.
+- Follow a company from research and adjust the demo alert thresholds.
 - Use `⌘K` / `Ctrl+K` to jump to research.
 - Review the simulated NIFTY 50 pulse and synchronized dashboard quotes.
 
 ## Data and limitations
 
-The mock portfolio contains 16 companies; six have illustrative research figures and ten are watchlist placeholders. This is a static front-end demo with no backend or live market feed. Displayed prices, financial values, and alerts are illustrative. The sample Push/Pull content is not verified market research. Source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
+The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. This is a static front-end demo with no backend or live market feed. Displayed prices, financial values, and alerts are illustrative. The sample Push/Pull content is not verified market research. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
 
 ## Architecture
 
