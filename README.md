@@ -1,35 +1,39 @@
 # FINN — AI Engineer build challenge
 
-A responsive prototype for two investor workflows: a prioritized Push brief and Pull company research grounded in primary-source discovery links.
+A mobile-first Indian equities workspace with an NSE-backed market brief, source-linked company research, a personal portfolio tracker, and a device-local watchlist.
 
 **Live demo:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer
 
 ## Run locally
 
-Open `index.html` in a browser, or serve this folder with `python3 -m http.server 8000` and visit `http://localhost:8000`.
+Serve this folder over HTTP so the browser can call the shared API:
 
-The phone layout includes persistent bottom navigation. Dark mode is the default, with a remembered light-mode option. Charts display illustrative data only; no live market feed is connected.
+```sh
+python3 -m http.server 8000
+```
 
-## AI research assistant
+Then open `http://localhost:8000`. NSE market data and Ask FINN are remote services; they will not run by opening `index.html` as a local file.
 
-The Research view includes Ask FINN. Its shared server-side API runs on Vercel; GitHub Pages serves only the static interface. The API retrieves recent official NSE announcement metadata and asks Gemini 3.5 Flash-Lite to summarize those records. Official filing links are returned separately for verification. The API key stays in Vercel. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the phases and free-tier setup.
+## Live data and AI
 
-## Demo flows
+The Market and Research views request live and end-of-day market data from the official NSE MCP service through the shared Vercel API. NSE reports a 1–3 minute delay during trading hours. Stock research displays the exchange quote, returned historical closes, and NSE corporate-announcement metadata with official filing links. Quarterly revenue, EBITDA, profit, and market capitalization are not supplied by this feed and are left unavailable rather than estimated.
 
-- Filter a four-item daily brief by filings or market moves; open an item to continue into company research.
-- Search the sample companies, review the quarterly revenue chart, illustrative calculations, and bull/bear cases.
-- Browse the 16-company Portfolio, search by name or sector, and add or remove companies from a device-local Watchlist.
-- Follow a company from research and adjust the demo alert thresholds.
-- Use `⌘K` / `Ctrl+K` to jump to research.
-- Review the simulated NIFTY 50 pulse and synchronized dashboard quotes.
+Ask FINN uses Gemini 3.5 Flash-Lite on the server. It summarizes recent NSE announcement metadata and returns official filing links separately; it does not claim to read an attachment unless its contents are provided. The API key remains in Vercel and is never sent to the browser. See [AI_IMPLEMENTATION_ROADMAP.md](AI_IMPLEMENTATION_ROADMAP.md) for the AI roadmap.
 
-## Data and limitations
+NSE provides its MCP data for educational and informational use, not for real-time trading, investment advice, or commercial products. See [NSE's terms](https://www.nseindia.in/nse-mcp) before reusing the feed. FINN is not investment advice.
 
-The mock portfolio contains 16 tracked companies; six have illustrative research figures and ten remain source-lookup placeholders. No live market feed is connected. Displayed prices, financial values, and alerts are illustrative; Ask FINN searches the web and displays only validated NSE/BSE citations, but may not find a relevant official filing for every question. Portfolio quantities, purchase prices, value, and returns are not provided. Watchlist choices are saved in this browser on this device, not synced to an account. Existing source links lead to public exchange, market data, or company-document discovery pages rather than specific filings. Do not treat the prototype as investment advice.
+## App flows
+
+- Review NSE index values and official gainers/losers in Market; refresh manually or let the view refresh periodically.
+- Search NSE listings by company name or symbol, then inspect a live quote, actual end-of-day price history, and official announcements.
+- Ask FINN about the selected company's recent NSE announcement metadata.
+- Add a company to Portfolio or Watchlist from its research view. Lists are empty until you choose companies and remain on this device.
+- Use the dark-default theme toggle and phone-sized bottom navigation.
+- Use `⌘K` / `Ctrl+K` to open company search.
+
+The Network view is intentionally empty until an authorized real contact source is connected; it contains no synthetic people or private data.
 
 ## Architecture
 
-Use deterministic code for calculations and thresholds. Ask FINN uses Gemini 3.5 Flash-Lite to summarize recent NSE announcement metadata for the selected ticker; official filing links are supplied for the user to verify. In a production version, ingest company fundamentals from primary documents. Keep source URLs and reporting periods with each claim; use an LLM only to summarize retrieved evidence, never as the source of a financial figure.
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for static-host steps. See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for an honest status of each assignment checkpoint. The [COVERING_NOTE.md](COVERING_NOTE.md) and [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) are ready to include with the submission.
+GitHub Pages serves the static frontend. The shared Vercel project serves the Gemini research endpoint and public NSE market-data proxy. Browser storage holds only your selected portfolio and watchlist symbols; neither list is sent to Ask FINN. See [DEPLOYMENT.md](DEPLOYMENT.md), [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md), [COVERING_NOTE.md](COVERING_NOTE.md), and [history.md](history.md) for submission materials.
