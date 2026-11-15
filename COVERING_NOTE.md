@@ -4,9 +4,11 @@
 
 Hello ENAM team,
 
-I built FINN, a mobile-first prototype linking a prioritized investor brief to company research. The Push flow groups sample announcements and unusual market moves; selecting an item opens the relevant Pull research view, with source discovery and a balanced set of questions to investigate.
+I built FINN, a mobile-first prototype that links a source-aware Indian market brief to company research. The Market view uses official NSE market data and dated end-of-day fallbacks. Selecting a mover opens its research page with returned price history, announcement metadata, and primary-source filing links.
 
-The prototype includes a 16-company mock watchlist, five additional research-only companies, and a source lookup for arbitrary NSE tickers. The mobile prototype includes dark mode, a light-mode toggle, persistent bottom navigation, and charts that make its sample data easier to review. Figures and sample alerts are illustrative. Live market data, exchange filings, and company fundamentals are not yet ingested; the next step would connect permitted primary sources and cite each research claim to its source document.
+Ask FINN uses Gemini to summarize recent NSE announcement metadata and surfaces official sources. The model does not read the linked filing attachments; the prototype therefore leaves unsupported revenue, profit, EBITDA, and valuation figures unavailable. Portfolio and watchlist symbols are stored locally on the device. Network remains empty until an authorized contact source is connected.
+
+The interface defaults to dark mode, offers light mode, and adapts its chart, navigation, and cards for phone use.
 
 **Prototype:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer  
