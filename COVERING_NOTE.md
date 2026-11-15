@@ -4,11 +4,11 @@
 
 Hello ENAM team,
 
-I built FINN, a mobile-first prototype that links a source-aware Indian market brief to company research. The Market view uses official NSE market data and dated end-of-day fallbacks. Selecting a mover opens its research page with returned price history, announcement metadata, and primary-source filing links.
+I built FINN, a mobile-first prototype that links a source-aware Indian market brief to company research and a configurable portfolio signal desk. The first visit loads a 16-company NSE coverage universe; the company list is a demo selection, while prices, filings, and historical chart points come from NSE. The tracked list is not a set of holdings or returns.
 
-Ask FINN uses Gemini to summarize recent NSE announcement metadata and surfaces official sources. The model does not read the linked filing attachments; the prototype therefore leaves unsupported revenue, profit, EBITDA, and valuation figures unavailable. Portfolio and watchlist symbols are stored locally on the device. Network remains empty until an authorized contact source is connected.
+Ask FINN uses Gemini to summarize recent NSE announcement metadata and surfaces official sources. Signal Desk applies a configurable percentage threshold to the returned NSE quote changes and groups selected material filings by a 24-hour, 7-day, or all-returned window. It refreshes while the app is open; it does not send background push notifications. The model does not read linked filing attachments, annual reports, or transcripts, so unsupported financial figures remain unavailable.
 
-The interface defaults to dark mode, offers light mode, and adapts its chart, navigation, and cards for phone use.
+The interface uses a refractive Liquid Glass treatment for the top bar and mobile dock, with opaque, readable chart and data panels. It defaults to dark mode, offers light mode, and adapts its workflows for phone use.
 
 **Prototype:** https://sitendernarwal.github.io/enam-finn-ai-engineer/  
 **Public repository:** https://github.com/sitendernarwal/enam-finn-ai-engineer  
